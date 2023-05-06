@@ -28,8 +28,7 @@ const Weather = () => {
             return setError(true);
         }
 
-        setError(false);
-        setResponseObj({});
+       
 
         const userCity = encodeURIComponent(city)
        
@@ -57,7 +56,7 @@ const Weather = () => {
             </header>
             <Container >
                 <form >
-                    <Row><input id="searchBox" type="text" placeholder="City, State (Atlanta, GA)" value={city} onChange={(e) => setCity(e.target.value)}/></Row>
+                    <Row><input id="searchBox" type="text" placeholder="City, State (Atlanta, GA)" value={city} autoComplete="on" onChange={(e) => setCity(e.target.value)}/></Row>
                     <Row><Button variant="primary" type="submit" onClick={getWeather}>Search</Button></Row>
                 </form>
             </Container>
