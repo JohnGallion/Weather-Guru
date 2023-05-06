@@ -2,8 +2,13 @@ import './App.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Search from './components/search';
 import Card from 'react-bootstrap/Card';
+import Weather from './components/weather';
+import Forecast from './components/forecast';
+import responseObj from './components/weather';
+
+
+
 
 function App() {
   return(
@@ -12,8 +17,9 @@ function App() {
         <Col></Col>
         <Col>
           <Card>
-            <Card.Body><Search /></Card.Body>
-          </Card>
+            <Card.Body><Weather /></Card.Body>
+          </Card> 
+              
         </Col>
         <Col></Col>
       </Row>
