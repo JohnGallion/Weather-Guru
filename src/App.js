@@ -3,9 +3,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
-import Weather from './components/weather';
-import Forecast from './components/forecast';
-import responseObj from './components/weather';
+import Weather from './components/display';
+import Forecast from './components/current';
+import responseObj from './components/display';
 
 
 
