@@ -16,10 +16,9 @@ function App() {
       <Row>
         <Col></Col>
         <Col>
-          <Card>
+          <Card className='mt-5'>
             <Card.Body><Weather /></Card.Body>
-          </Card> 
-              
+          </Card>               
         </Col>
         <Col></Col>
       </Row>

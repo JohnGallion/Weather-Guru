@@ -1,3 +1,5 @@
-.search {
-    height: 100%;
+@import url(https://fonts.gstatic.com/s/righteous/v14/1cXxaUPXBpj2rGoU7C9WhnGFq8Kk1doH.woff2);
+
+h1 {
+    font-family: Righteous;
 }
