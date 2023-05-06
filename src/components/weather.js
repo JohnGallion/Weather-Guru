@@ -18,15 +18,12 @@ import Donate from "..";
 const Weather = () => {
 
     let [city, setCity] = useState('');
-    let [error, setError] = useState('');
     let [responseObj, setResponseObj] = useState({});
 
        function getWeather(e) {
         e.preventDefault();
         
-        if (city.length === 0) {
-            return setError(true);
-        }
+        
 
        
 
@@ -42,8 +39,7 @@ const Weather = () => {
             .then(response => response.json())
                 
             .then(response => {setResponseObj(response)})
-
-            
+  
             
         }
            
@@ -56,8 +52,12 @@ const Weather = () => {
             </header>
             <Container >
                 <form >
-                    <Row><input id="searchBox" type="text" placeholder="City, State (Atlanta, GA)" value={city} autoComplete="on" onChange={(e) => setCity(e.target.value)}/></Row>
-                    <Row><Button variant="primary" type="submit" onClick={getWeather}>Search</Button></Row>
+                    <Row>
+                        <input id="searchBox" type="text" placeholder="City, State (Atlanta, GA)" value={city} autoComplete="on" onChange={(e) => setCity(e.target.value)}/>
+                    </Row>
+                    <Row>
+                        <Button variant="primary" type="submit" onClick={getWeather}>Search</Button>
+                    </Row>
                 </form>
             </Container>
             <Card className="mt-3">
@@ -68,11 +68,10 @@ const Weather = () => {
             <Card.Footer className="text-center fs-6">
                 <p><small>Powered by WeatherApi.com</small></p>
                 <form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="U77F3PM2SR83Q" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form>
-
+                    <input type="hidden" name="hosted_button_id" value="U77F3PM2SR83Q" />
+                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                    <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                </form>
             </Card.Footer>
           </Card>  
           </div>
