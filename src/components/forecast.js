@@ -17,6 +17,7 @@ import { Container } from "react-bootstrap";
       return(
         
         <Container>
+          <p><small>last updated: {responseObj.current.last_updated}</small></p>
           <p><strong>City:</strong> {responseObj.location.name}, {responseObj.location.region}</p>
           <p><strong>Country:</strong> {responseObj.location.country}</p>
           <p><strong>Temperature:</strong> {responseObj.current.temp_f}f / {responseObj.current.temp_c}c</p>
